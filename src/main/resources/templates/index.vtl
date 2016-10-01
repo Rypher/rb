@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.2/react-dom.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.27.3/react-bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.2/amplify.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.0.3/sockjs.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+		<style type="text/css">
+			html, body { height: 100%; margin: 0; padding: 0; }
+			#map { height: 800px; }
+		</style>
+
+	</head>
+	<body>
+
+		<script id="model" type="application/json">
+			$json
+		</script>
+
+		<div id="nav"></div>
+		<div id="map"></div>
+		<div id="content"></div>
+
+		<script type="text/javascript" src="static/rbcom.js"></script>
+		<script type="text/javascript" src="static/index.js"></script>
+		<script type="text/javascript" src="static/nav.js"></script>
+
+		<script>
+			var model = JSON.parse(document.getElementById("model").innerHTML);
+
+			ReactDOM.render(
+				React.createElement(Nav, {model: model}),
+				document.getElementById('nav')
+			);
+			ReactDOM.render(
+				React.createElement(Index, model),
+				document.getElementById('content')
+			);
+		</script>
+
+	</body>
+</html>
