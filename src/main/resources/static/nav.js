@@ -22,7 +22,6 @@ var Nav = React.createClass({
             };
             RBCOM.publish('markerAdded', marker);
         } else if (key == 2) {
-
             infoWindow = new google.maps.InfoWindow();
         }
     },
@@ -39,7 +38,7 @@ var Nav = React.createClass({
                 React.createElement(
                     'a',
                     { href: '' },
-                    'Rossponsys'
+                    'rossbailey'
                 )
             ),
             React.createElement(
