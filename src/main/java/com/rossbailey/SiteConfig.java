@@ -24,13 +24,22 @@ public class SiteConfig {
 		return engine;
 	}
 
+	private static final String host = "rdsp1.cfh6ek67sfzu.us-west-2.rds.amazonaws.com";
+	private static final Integer port = 5432;
+	private static final String user = "rmb";
+	private static final String pass = "Murdoch!1";
+	private static final String instance = "core";
+
+
 	@Bean
 	public DataSource dataSource() {
 
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setUsername("postgres");
-		dataSource.setPassword("Ratatat!1");
-		dataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
+//		dataSource.setUsername("postgres");
+//		dataSource.setPassword("Ratatat!1");
+		dataSource.setUrl("jdbc:postgresql://" + host + ":" + port + "/" + instance);
+		dataSource.setUsername(user);
+		dataSource.setPassword(pass);
 		dataSource.setDriverClassName("org.postgresql.Driver");
 
 		return dataSource;
