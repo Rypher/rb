@@ -13,7 +13,7 @@ public class SiteApplication extends WebMvcConfigurerAdapter {
     public static void main(String[] args) {
         SpringApplication.run(SiteApplication.class, args);
 
-		///src/spring-rossponsys/src/main/resources/templates --watch --out-dir /src/spring-rossponsys/src/main/resources/static
+		///src/sandbox/site/src/main/resources/templates --watch --out-dir /src/sandbox/site/src/main/resources/static
     }
 
 	@Override

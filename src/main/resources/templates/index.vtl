@@ -12,8 +12,11 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.2/amplify.js"></script>
 
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.0.3/sockjs.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+
 
 		<style type="text/css">
 			html, body { height: 100%; margin: 0; padding: 0; }
@@ -29,12 +32,13 @@
 
 		<div id="nav"></div>
 		<div id="map"></div>
+		<input id="pac-input" class="controls" type="text" placeholder="Search Box">
 		<div id="content"></div>
 
 		<script type="text/javascript" src="static/rbcom.js"></script>
 		<script type="text/javascript" src="static/index.js"></script>
 		<script type="text/javascript" src="static/nav.js"></script>
-
+		<script type="text/javascript" src="static/map.js"></script>
 		<script>
 			var model = JSON.parse(document.getElementById("model").innerHTML);
 
@@ -47,6 +51,8 @@
 				document.getElementById('content')
 			);
 		</script>
-
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWsCvcDwMYgz8JkNfmZBgYgxBritbGTdU&libraries=places&callback=initMap">
+		</script>
 	</body>
 </html>

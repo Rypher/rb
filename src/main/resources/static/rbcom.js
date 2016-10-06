@@ -1,10 +1,4 @@
 
-var clientSetting = {
-	events: {
-		useSocket: false
-	}
-}
-
 
 var RBCOM = {
     subscribe: function(channel, callback) {
@@ -12,7 +6,7 @@ var RBCOM = {
     },
     publish: function(channel, params) {
 
-		if (clientSetting.events.useSocket && stompClient != null) {
+		if (stompClient != null) {
 
 			//console.log('Publishing to socket:');
 
@@ -25,6 +19,7 @@ var RBCOM = {
 
 			stompClient.send("/app/publish", {}, JSON.stringify(message));
 		} else {
+			console.log('Missed message');
 			amplify.publish(channel, params);
 		}
 

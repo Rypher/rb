@@ -1,0 +1,18 @@
+/home/ec2-user/src/rb/src/main/resources
+export JAVA_HOME=/opt/jdk1.8.0_101 
+
+sudo netstat -lpn |grep :8080
+
+sudo service httpd start
+
+
+plsqlftier.cfh6ek67sfzu.us-west-2.rds.amazonaws.com
+
+git reset --hard origin/master 
+git pull origin master
+
+
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+
+
+mvn spring-boot:run
