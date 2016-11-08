@@ -72,9 +72,11 @@ public class Index {
 
 	@RequestMapping(value = "/events/", method = RequestMethod.POST)
 	public void events(
-			@RequestBody() Map<String, Object> model
+			@RequestBody() List<Map<String, Object>> model
 	) {
-		rossponsysDao.putEvent(model);
+		for (Map<String, Object> objectMap : model) {
+			rossponsysDao.putEvent(objectMap);
+		}
 	}
 
 
