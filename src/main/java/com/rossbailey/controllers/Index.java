@@ -39,7 +39,7 @@ public class Index {
 
 	@Autowired
 	PageService pageService;
-	
+
 	@Autowired
 	RossponsysDao rossponsysDao;
 
@@ -70,7 +70,7 @@ public class Index {
 	}
 
 
-	@RequestMapping(value = "/events/", method = RequestMethod.PUT)
+	@RequestMapping(value = "/events/", method = RequestMethod.POST)
 	public void events(
 			@RequestBody() Map<String, Object> model
 	) {
