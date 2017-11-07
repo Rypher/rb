@@ -57,7 +57,6 @@ public class Index {
 			ipAddress = request.getRemoteAddr();
 		}
 
-
 		String json = objectMapper.writeValueAsString(model);
 		model.put("json", json);
 

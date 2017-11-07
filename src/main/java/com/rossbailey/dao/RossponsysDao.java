@@ -58,7 +58,7 @@ public class RossponsysDao {
 
 	public List<RossponsysEvent> getEvents(Integer id) {
 
-		String sql = "select id, cid, event, created from rossponsysevent where id > '" + id + "' order by id asc";
+		String sql = "select id, cid, event, created from rossponsysevent where id > '" + id + "' order by id asc limit 100";
 
 		List<Map<String, Object>> list = jdbcTemplate.queryForList(sql);
 

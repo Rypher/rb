@@ -8,7 +8,8 @@ var Index = React.createClass({
 		RBCOM.publish('markerAdded', marker);
 	},
     render: function() {
-        return <div />;
-        //return <ReactBootstrap.Input type="text" ref="input" onChange={this.handleChange} />;
+        return <div>
+        	<input type="text" ref="input" onChange={this.handleChange} />;
+		</div>
     }
 });
